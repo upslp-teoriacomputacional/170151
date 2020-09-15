@@ -19,8 +19,9 @@ let A : HashSet<_> = [3, 4, 5, 6, 7].iter().collect();
 let B : HashSet<i32> = HashSet::new();
 </code>
 y podemos lograr su impresión de la siguiente manera: 
-```println!("{:?}", &A);
-```
+<pre>
+println!("{:?}", &A);
+</pre>
 Entre las cosas básicas que podemos realizar con un conjunto encontramos el transformar un vector que ya existía en conjunto:
 ```let A = [1, 2, 3]; 
 let conjuntoA: HashSet<_> = A.iter().collect(); 
