@@ -14,10 +14,10 @@ Para manejar los conjuntos en rust se utilizó el módulo std::collections::Hash
 La biblioteca de colección estándar de Rust nos proporciona implementaciones eficientes de las estructuras de datos de programación de propósito general. La colección para conjuntos es HashSet, con este podemos crear conjuntos, imprimirlos y realizar operaciones entre ellos como la unión, intersección, diferencia, entre otros.
 
 Podemos Crear un conjunto con valores o un conjunto vació de la siguiente manera:
-```
+<code>
 let A : HashSet<_> = [3, 4, 5, 6, 7].iter().collect();
 let B : HashSet<i32> = HashSet::new();
-```
+</code>
 y podemos lograr su impresión de la siguiente manera: 
 ```println!("{:?}", &A);
 ```
@@ -53,25 +53,25 @@ Para saber como funcionan las operaciones de conjuntos, declararemos dos conjunt
 let B : HashSet<_> = [3, 4, 5, 6, 7].iter().collect();
 ```
 **Unión.** . - La unión es una operación que resulta en otro conjunto, cuyos elementos son los mismos de los conjuntos iniciales. Por ejemplo: AUB, donde el resultado sería los elementos de ambos conjuntos.
-```A.union(&B)
+``` A.union(&B)
 ```
 **Intersección**. - Se da otro conjunto en el que se encuentran los elementos que pertenecerá a A y que también pertenecerán a B es decir los elementos comunes en ambos conjuntos. A∩B
-```A.intersection(&B)
+``` A.intersection(&B)
 ```
 **Diferencia**. - La diferencia de A – B es un conjunto al que pertenece todos los elementos de A que no pertenecen a B.
-```A.difference(&B)
+``` A.difference(&B)
 ```
 **Diferencia simétrica**. - es una operación cuyo resultado es otro conjunto que contiene a aquellos elementos que pertenecen a ambos conjuntos pero que no comparten, es decir, aquellos elementos que no son los mismos.
-```A.symmetric_difference(&B) // A^B
+``` A.symmetric_difference(&B) // A^B
 B.symmetric_difference(&A) // B^A
 ```
 Para los siguientes ejemplos declararemos dos nuevos conjuntos, recordando que los siguientes comandos solamente nos regresan un True o False:
-```let B: HashSet<_> = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].iter().collect(); 
+``` let B: HashSet<_> = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].iter().collect(); 
 let A: HashSet<_> = [1, 2, 3, 4, 5].iter().collect(); 
 ```
 **Subconjunto**.- Es un conjunto de elementos que tienen las mismas características y que está incluido dentro de otro conjunto más amplio.
-```A.is_subset(&B)
+``` A.is_subset(&B)
 ```
 **Superconjunto**. - Es un conjunto de elementos donde los elementos de un subconjunto existen en él.
-```B.is_superset(&A)
+``` B.is_superset(&A)
 ```
