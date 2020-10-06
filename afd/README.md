@@ -79,28 +79,21 @@ if digito.is_match(carac){
 }
 ```
 En nuestra funcion principal crearemos una tabla para la tabla de transiciones. La cual es:
-
+<pre>
 |Estado	| Digitos | Operadores | Fin de cadena |
-
 |  q0   |   q1	  |  Error	   | Error         |
-
 |  q1	| Error	  |   q2	   | Error         |
-
 |  q2	|   qf	  |  Error	   | Error         |
-
 |  qf	| Error	  |  Error	   | Aceptacion    |
-
+</pre>
 
 Entonces nuestra tabla de transiciones seria:
-
+<pre>
 | 1 |  E |  E |
-
 | E |  2 |  E |
-
 | 3 |  E |  E |
-
 | E |  E |  A |
-
+</pre>
 
 Para crear esta tabla en Rust se han cambiado los E por 4 y las A por 5
 
