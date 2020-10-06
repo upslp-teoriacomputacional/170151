@@ -10,7 +10,7 @@
 #### Repositorio: https://github.com/upslp-teoriacomputacional/170151
 
 ## Como se soluciono el problema 
-Las expresiones de los operadores binarios están todas escritas con notación infija. Los operadores logicos basicos O, Y, NO y O Exclusivo se representan en rsut como || (or), && (and), ! (not) y ^(xor). Los operadores ||y &&pueden aplicarse a operandos de tipo booleano. Se diferencian de |y &en que el operando de la derecha solo se evalúa cuando el operando de la izquierda no determina ya el resultado de la expresión. Es decir, ||solo evalúa su operando de la derecha cuando el operando de la izquierda evalúa a false, y &&solo cuando evalúa a true.
+Las expresiones de los operadores binarios están todas escritas con notación infija. Los operadores logicos basicos O, Y, NO y O Exclusivo se representan en rsut como || (or), && (and), ! (not) y ^(xor). Los operadores || y && pueden aplicarse a operandos de tipo booleano. Se diferencian de | y & en que el operando de la derecha solo se evalúa cuando el operando de la izquierda no determina ya el resultado de la expresión. Es decir, ||solo evalúa su operando de la derecha cuando el operando de la izquierda evalúa a false, y &&solo cuando evalúa a true.
 Se realizara una comparacion entre dos boleanos para crear las tablas de verdad de estos operadores logicos.
 Al utilizar || y && las variables deben accederse por referencia.
 
