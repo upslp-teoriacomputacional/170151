@@ -141,37 +141,22 @@ for  character in cadena.chars(){
 
 Al final si el valor obtenido en estado es una E imprimimos cadena no valida, si el estado no es 3 que es el de aceptacion imprimimos cadena no valida y si el estado es 3 es una cadena de aceptacion
 Si ingresamos una cadena valida nuestro resultado seria el siguiente:
-
+<pre>
 +-------------------------------------+
-
 |    Ingrese una cadena a evaluar:    |
-
 +-------------------------------------+
-
 1+5
-
 +--------------+---------+-----------+---------------+
-
 |  Edo. Actual |Caracter |  Simbolo  |Edo. Siguiente |
-
 +--------------+---------+-----------+---------------+
-
 |     0        |  1      |  Digito   |     1         |
-
 +--------------+---------+-----------+---------------+
-
 |     1        |  +      | Operador  |     2         |
-
 +--------------+---------+-----------+---------------+
-
 |     2        |  5      |  Digito   |     3         |
-
 +--------------+---------+-----------+---------------+
-
 |     3        |         |Fin Cadena |               |
-
 +--------------+---------+-----------+---------------+
-
 |                Cadena Valida                       |
-
 +----------------------------------------------------+
+</pre>
