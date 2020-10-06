@@ -1,4 +1,4 @@
-# Rust Program to Illustrate Different Set Operations
+# Rust Program autómata finito determinista.
 #### Institución: Universidad Politécnica de San Luis Potosí
 #### Alumno: Yesenia America Morales Diaz de Leon
 #### Matricula: 170151
@@ -9,10 +9,12 @@
 #### Lenguaje: Rust
 #### Repositorio: https://github.com/upslp-teoriacomputacional/170151
 
-Para este programa se desarrollo un automata finito para validar operacionesmatematicas. Para reaalizar esto se  utiliza una biblioteca que nos ayuda a manejar expresiones regulares.
+Para este programa se desarrollo un automata finito para validar operaciones matematicas. Para realizar esto se  utiliza una biblioteca que nos ayuda a manejar expresiones regulares. Al momento de utilizar esta libreria nos pide realizar el programa como un proyecto por lo que el codigo fuente se ubica en afd_170151/src/main.rs.
 
 Se utilizan expresiones de:
+
 Operador = +,-,*,/
+
 Numeros = 0-9
 
 El programa te pide ingresar una cadena para evaluar, la valida con la tabla de estados, te muestra la tabla de estados correspondiente a la cadena ingresada y te dice si es valida o no.
@@ -77,17 +79,28 @@ if digito.is_match(carac){
 }
 ```
 En nuestra funcion principal crearemos una tabla para la tabla de transiciones. La cual es:
+
 |Estado	| Digitos | Operadores | Fin de cadena |
+
 |  q0   |   q1	  |  Error	   | Error         |
+
 |  q1	| Error	  |   q2	   | Error         |
+
 |  q2	|   qf	  |  Error	   | Error         |
+
 |  qf	| Error	  |  Error	   | Aceptacion    |
 
+
 Entonces nuestra tabla de transiciones seria:
+
 | 1 |  E |  E |
+
 | E |  2 |  E |
+
 | 3 |  E |  E |
+
 | E |  E |  A |
+
 
 Para crear esta tabla en Rust se han cambiado los E por 4 y las A por 5
 
@@ -130,19 +143,35 @@ Al final si el valor obtenido en estado es una E imprimimos cadena no valida, si
 Si ingresamos una cadena valida nuestro resultado seria el siguiente:
 
 +-------------------------------------+
+
 |    Ingrese una cadena a evaluar:    |
+
 +-------------------------------------+
+
 1+5
+
 +--------------+---------+-----------+---------------+
+
 |  Edo. Actual |Caracter |  Simbolo  |Edo. Siguiente |
+
 +--------------+---------+-----------+---------------+
+
 |     0        |  1      |  Digito   |     1         |
+
 +--------------+---------+-----------+---------------+
+
 |     1        |  +      | Operador  |     2         |
+
 +--------------+---------+-----------+---------------+
+
 |     2        |  5      |  Digito   |     3         |
+
 +--------------+---------+-----------+---------------+
+
 |     3        |         |Fin Cadena |               |
+
 +--------------+---------+-----------+---------------+
+
 |                Cadena Valida                       |
+
 +----------------------------------------------------+
