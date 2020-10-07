@@ -5,10 +5,8 @@
  Matricula: 170151
  Materia: Teoría Computacional
  Profesor: Juan Carlos Gónzalez Ibarra
-
  Repositorio: https://github.com/upslp-teoriacomputacional/170151
  Escrito: 06/10/2020
-
  Objetivo:  Validar una expresión aritmética. Programar un autómata 
  capaz de decidir si es o no una expresión aritmética valida.
 */
@@ -37,11 +35,12 @@ fn caracter(character: char) -> i32 {
             return 1;
         }else{
             if carac==fin {
-            return 2;
+                //Llego al fin de la cadena
+                process::exit(0x0100);
             }else{
                 //si no es ni un digito ni un operador entonces es un caracter no validp
-                println!("Error el caracter: {} no es valido", carac);
-                process::exit(0x0100);
+               //Regresa un 2
+                return 2;
             }
         }
         
@@ -77,6 +76,7 @@ fn main(){
     //tabla=[[1,"E","E"],["E",2,"E"],[3,"E","E"],["E","E","A"]]
     let mut estado: i32 = 0; //Declaramos variables de estaod y simbolo
     let mut simbolo: String = "".to_string();
+    let mut fin="";
     println!("+-------------------------------------+");
     println!("|    Ingrese una cadena a evaluar:    |");
     println!("+-------------------------------------+");
@@ -96,6 +96,15 @@ fn main(){
             simbolo = " Digito  ".to_string();
         }else if charcaracter == 1 {
             simbolo = "Operador ".to_string();
+        }else if charcaracter== 2 {
+            //al concluir si el estado no es 3 que es el de aceptacion imprimimos cadena no valida    
+            if estado!=3 {
+                println!("|              Cadena No Valida :(                   |");
+                println!("+----------------------------------------------------+");
+            }
+            println!("Error el caracter: {} no es valido", character);
+            process::exit(0x0100);
+            
         }
         //Si el valor obtenido es una E imprimimos cadena no valida
         if estado==4 {
@@ -103,19 +112,16 @@ fn main(){
             body();
             println!("|              Cadena No Valida :(                   |");
             println!("+----------------------------------------------------+"); 
+            process::exit(0x0100);
         }
         contenido(estadosig,character,&simbolo,estado);
-        //al concluir si el estado no es 3 que es el de aceptacion imprimimos cadena no valida    
-        if estado>3 {
-            println!("|              Cadena No Valida :(                   |");
-            println!("+----------------------------------------------------+");
-        }
         //si el estado es 3 es una cadena de aceptacion
         if estado==3 {
             println!("|     {}        |         |Fin Cadena |               |", estado);
             body();
             println!("|                Cadena Valida                       |");
             println!("+----------------------------------------------------+");
+            process::exit(0x0100);
         }
     }
 } 
