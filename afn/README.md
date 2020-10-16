@@ -14,6 +14,7 @@ Para este programa se desarrollo un automata finito no deterministico para valid
 El programa te pide ingresar una cadena para evaluar, la valida con la tabla de estados, te muestra la tabla de estados correspondiente a la cadena ingresada y te dice si es valida o no.
 
 Nuestro AFN seria el siguiente:
+
 ![Imagen AFN](afn.JPG)
 
 ## Como se soluciono el problema 
@@ -83,18 +84,18 @@ qf={q11}
 En nuestra funcion principal crearemos una tabla para la tabla de transiciones. La cual es:
 <pre>
 |Estado	|     ε    |    a    |    b   | Fin de cadena |
-|  q0   |   q1	   |  Error	 |  Error | Error         |
-|  q1	|   q2,q4  |  Error	 |  Error | Error         |
-|  q2	|  Error   |   q3	 |  Error | Error         |
-|  q3	|   q4	   |  Error	 |  Error | Error         |
-|  q4	|   q5,q1  |  Error	 |  Error | Error         |
-|  q5	|  Error   |  Error	 |   q6   | Error         |
-|  q6	|   q7	   |  Error	 |  Error | Error         |
-|  q7	|   q8,q10 |  Error	 |  Error | Error         |
-|  q8	|  Error   |   q9	 |  Error | Error         |
-|  q9	|   q10	   |  Error	 |  Error | Error         |
-|  q10	|   q11,q7 |  Error	 |  Error | Error         |
-|  q11	|  Error   |  Error	 |  Error | Aceptacion    |
+|  q0   |   q1	   |  Error  |  Error | Error         |
+|  q1	|   q2,q4  |  Error  |  Error | Error         |
+|  q2	|  Error   |   q3    |  Error | Error         |
+|  q3	|   q4	   |  Error  |  Error | Error         |
+|  q4	|   q5,q1  |  Error  |  Error | Error         |
+|  q5	|  Error   |  Error  |   q6   | Error         |
+|  q6	|   q7	   |  Error  |  Error | Error         |
+|  q7	|   q8,q10 |  Error  |  Error | Error         |
+|  q8	|  Error   |   q9    |  Error | Error         |
+|  q9	|   q10	   |  Error  |  Error | Error         |
+|  q10	|   q11,q7 |  Error  |  Error | Error         |
+|  q11	|  Error   |  Error  |  Error | Aceptacion    |
 </pre>
 
 Entonces nuestra tabla de transiciones seria:
