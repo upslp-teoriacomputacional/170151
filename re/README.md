@@ -1,4 +1,4 @@
-# Rust Program autómata finito determinista.
+# Rust Regular Expressions program
 #### Institución: Universidad Politécnica de San Luis Potosí
 #### Alumno: Yesenia America Morales Diaz de Leon
 #### Matricula: 170151
