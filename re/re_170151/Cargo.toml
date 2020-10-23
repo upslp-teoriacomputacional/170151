@@ -1,0 +1,10 @@
+[package]
+name = "re_170151"
+version = "0.1.0"
+authors = ["Yesenia Morales <170151@upslp.edu.mx>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+regex = "1.3.9"

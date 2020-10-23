@@ -66,7 +66,7 @@ fn body()
 fn main(){
     //Establecer la tabla de transiciones del automata AFN 
     //Como no acepta el 10 y 11 se utilizan las letras D y O.
-    //Que en codigo ascci serian 68 y 79.
+    //Que en codigo ascii serian 68 y 79.
     let tabla: Vec<Vec<char>>;
     tabla = vec![ 
                 // ε   A   B   Fin
